@@ -1,0 +1,62 @@
+
+package com.amadeus.xml.tfopcr_19_2_1a;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * This segment is used to convey the company information
+ * 
+ * <p>Java class for CompanyInformationType_40602S complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="CompanyInformationType_40602S">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="companyCode" type="{http://xml.amadeus.com/TFOPCR_19_2_1A}AlphaNumericString_Length1To35" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "CompanyInformationType_40602S", propOrder = {
+    "companyCode"
+})
+public class CompanyInformationType40602S {
+
+    protected String companyCode;
+
+    /**
+     * Gets the value of the companyCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCompanyCode() {
+        return companyCode;
+    }
+
+    /**
+     * Sets the value of the companyCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCompanyCode(String value) {
+        this.companyCode = value;
+    }
+
+}

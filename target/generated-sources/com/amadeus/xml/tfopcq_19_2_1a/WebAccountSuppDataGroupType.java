@@ -1,0 +1,521 @@
+
+package com.amadeus.xml.tfopcq_19_2_1a;
+
+import java.util.ArrayList;
+import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
+
+
+/**
+ * will convey Web Account detailed payment data
+ * 
+ * <p>Java class for WebAccountSuppDataGroupType complex type.
+ * 
+ * <p>The following schema fragment specifies the expected content contained within this class.
+ * 
+ * <pre>
+ * &lt;complexType name="WebAccountSuppDataGroupType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="pspIndicator" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}StatusType_68646S"/>
+ *         &lt;element name="uatpCard" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}CreditCardDataType" minOccurs="0"/>
+ *         &lt;element name="paypalParameters" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}StatusType_84988S" maxOccurs="2" minOccurs="0"/>
+ *         &lt;element name="pspUrl" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}CommunicationContactType_202254S" minOccurs="0"/>
+ *         &lt;element name="shippingAddress" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}AddressType_68644S" minOccurs="0"/>
+ *         &lt;element name="payerName" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}TravellerInformationType_202101S" minOccurs="0"/>
+ *         &lt;element name="accountNumber" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}ReferenceInfoType_202099S" minOccurs="0"/>
+ *         &lt;element name="merchantSiteDetails" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="countryData" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}CountryInformationTypeU"/>
+ *                   &lt;element name="cppPspColor" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}FreeTextInformationType_202263S" maxOccurs="3" minOccurs="0"/>
+ *                   &lt;element name="urls" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}CommunicationContactType_202254S" maxOccurs="3" minOccurs="0"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="errorDescription" maxOccurs="99" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="severityCodeType" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}ResponseAnalysisDetailsType_215561S"/>
+ *                   &lt;element name="paymentError" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}ErrorGroupType_302085G" maxOccurs="2" minOccurs="0"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "WebAccountSuppDataGroupType", propOrder = {
+    "pspIndicator",
+    "uatpCard",
+    "paypalParameters",
+    "pspUrl",
+    "shippingAddress",
+    "payerName",
+    "accountNumber",
+    "merchantSiteDetails",
+    "errorDescription"
+})
+public class WebAccountSuppDataGroupType {
+
+    @XmlElement(required = true)
+    protected StatusType68646S pspIndicator;
+    protected CreditCardDataType uatpCard;
+    protected List<StatusType84988S> paypalParameters;
+    protected CommunicationContactType202254S pspUrl;
+    protected AddressType68644S shippingAddress;
+    protected TravellerInformationType202101S payerName;
+    protected ReferenceInfoType202099S accountNumber;
+    protected WebAccountSuppDataGroupType.MerchantSiteDetails merchantSiteDetails;
+    protected List<WebAccountSuppDataGroupType.ErrorDescription> errorDescription;
+
+    /**
+     * Gets the value of the pspIndicator property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link StatusType68646S }
+     *     
+     */
+    public StatusType68646S getPspIndicator() {
+        return pspIndicator;
+    }
+
+    /**
+     * Sets the value of the pspIndicator property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link StatusType68646S }
+     *     
+     */
+    public void setPspIndicator(StatusType68646S value) {
+        this.pspIndicator = value;
+    }
+
+    /**
+     * Gets the value of the uatpCard property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link CreditCardDataType }
+     *     
+     */
+    public CreditCardDataType getUatpCard() {
+        return uatpCard;
+    }
+
+    /**
+     * Sets the value of the uatpCard property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CreditCardDataType }
+     *     
+     */
+    public void setUatpCard(CreditCardDataType value) {
+        this.uatpCard = value;
+    }
+
+    /**
+     * Gets the value of the paypalParameters property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the paypalParameters property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPaypalParameters().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link StatusType84988S }
+     * 
+     * 
+     */
+    public List<StatusType84988S> getPaypalParameters() {
+        if (paypalParameters == null) {
+            paypalParameters = new ArrayList<StatusType84988S>();
+        }
+        return this.paypalParameters;
+    }
+
+    /**
+     * Gets the value of the pspUrl property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link CommunicationContactType202254S }
+     *     
+     */
+    public CommunicationContactType202254S getPspUrl() {
+        return pspUrl;
+    }
+
+    /**
+     * Sets the value of the pspUrl property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link CommunicationContactType202254S }
+     *     
+     */
+    public void setPspUrl(CommunicationContactType202254S value) {
+        this.pspUrl = value;
+    }
+
+    /**
+     * Gets the value of the shippingAddress property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link AddressType68644S }
+     *     
+     */
+    public AddressType68644S getShippingAddress() {
+        return shippingAddress;
+    }
+
+    /**
+     * Sets the value of the shippingAddress property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link AddressType68644S }
+     *     
+     */
+    public void setShippingAddress(AddressType68644S value) {
+        this.shippingAddress = value;
+    }
+
+    /**
+     * Gets the value of the payerName property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TravellerInformationType202101S }
+     *     
+     */
+    public TravellerInformationType202101S getPayerName() {
+        return payerName;
+    }
+
+    /**
+     * Sets the value of the payerName property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TravellerInformationType202101S }
+     *     
+     */
+    public void setPayerName(TravellerInformationType202101S value) {
+        this.payerName = value;
+    }
+
+    /**
+     * Gets the value of the accountNumber property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ReferenceInfoType202099S }
+     *     
+     */
+    public ReferenceInfoType202099S getAccountNumber() {
+        return accountNumber;
+    }
+
+    /**
+     * Sets the value of the accountNumber property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ReferenceInfoType202099S }
+     *     
+     */
+    public void setAccountNumber(ReferenceInfoType202099S value) {
+        this.accountNumber = value;
+    }
+
+    /**
+     * Gets the value of the merchantSiteDetails property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link WebAccountSuppDataGroupType.MerchantSiteDetails }
+     *     
+     */
+    public WebAccountSuppDataGroupType.MerchantSiteDetails getMerchantSiteDetails() {
+        return merchantSiteDetails;
+    }
+
+    /**
+     * Sets the value of the merchantSiteDetails property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link WebAccountSuppDataGroupType.MerchantSiteDetails }
+     *     
+     */
+    public void setMerchantSiteDetails(WebAccountSuppDataGroupType.MerchantSiteDetails value) {
+        this.merchantSiteDetails = value;
+    }
+
+    /**
+     * Gets the value of the errorDescription property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the errorDescription property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getErrorDescription().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link WebAccountSuppDataGroupType.ErrorDescription }
+     * 
+     * 
+     */
+    public List<WebAccountSuppDataGroupType.ErrorDescription> getErrorDescription() {
+        if (errorDescription == null) {
+            errorDescription = new ArrayList<WebAccountSuppDataGroupType.ErrorDescription>();
+        }
+        return this.errorDescription;
+    }
+
+
+    /**
+     * <p>Java class for anonymous complex type.
+     * 
+     * <p>The following schema fragment specifies the expected content contained within this class.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="severityCodeType" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}ResponseAnalysisDetailsType_215561S"/>
+     *         &lt;element name="paymentError" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}ErrorGroupType_302085G" maxOccurs="2" minOccurs="0"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "severityCodeType",
+        "paymentError"
+    })
+    public static class ErrorDescription {
+
+        @XmlElement(required = true)
+        protected ResponseAnalysisDetailsType215561S severityCodeType;
+        protected List<ErrorGroupType302085G> paymentError;
+
+        /**
+         * Gets the value of the severityCodeType property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link ResponseAnalysisDetailsType215561S }
+         *     
+         */
+        public ResponseAnalysisDetailsType215561S getSeverityCodeType() {
+            return severityCodeType;
+        }
+
+        /**
+         * Sets the value of the severityCodeType property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link ResponseAnalysisDetailsType215561S }
+         *     
+         */
+        public void setSeverityCodeType(ResponseAnalysisDetailsType215561S value) {
+            this.severityCodeType = value;
+        }
+
+        /**
+         * Gets the value of the paymentError property.
+         * 
+         * <p>
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the paymentError property.
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * <pre>
+         *    getPaymentError().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link ErrorGroupType302085G }
+         * 
+         * 
+         */
+        public List<ErrorGroupType302085G> getPaymentError() {
+            if (paymentError == null) {
+                paymentError = new ArrayList<ErrorGroupType302085G>();
+            }
+            return this.paymentError;
+        }
+
+    }
+
+
+    /**
+     * <p>Java class for anonymous complex type.
+     * 
+     * <p>The following schema fragment specifies the expected content contained within this class.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="countryData" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}CountryInformationTypeU"/>
+     *         &lt;element name="cppPspColor" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}FreeTextInformationType_202263S" maxOccurs="3" minOccurs="0"/>
+     *         &lt;element name="urls" type="{http://xml.amadeus.com/TFOPCQ_19_2_1A}CommunicationContactType_202254S" maxOccurs="3" minOccurs="0"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "", propOrder = {
+        "countryData",
+        "cppPspColor",
+        "urls"
+    })
+    public static class MerchantSiteDetails {
+
+        @XmlElement(required = true)
+        protected CountryInformationTypeU countryData;
+        protected List<FreeTextInformationType202263S> cppPspColor;
+        protected List<CommunicationContactType202254S> urls;
+
+        /**
+         * Gets the value of the countryData property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link CountryInformationTypeU }
+         *     
+         */
+        public CountryInformationTypeU getCountryData() {
+            return countryData;
+        }
+
+        /**
+         * Sets the value of the countryData property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link CountryInformationTypeU }
+         *     
+         */
+        public void setCountryData(CountryInformationTypeU value) {
+            this.countryData = value;
+        }
+
+        /**
+         * Gets the value of the cppPspColor property.
+         * 
+         * <p>
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the cppPspColor property.
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * <pre>
+         *    getCppPspColor().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link FreeTextInformationType202263S }
+         * 
+         * 
+         */
+        public List<FreeTextInformationType202263S> getCppPspColor() {
+            if (cppPspColor == null) {
+                cppPspColor = new ArrayList<FreeTextInformationType202263S>();
+            }
+            return this.cppPspColor;
+        }
+
+        /**
+         * Gets the value of the urls property.
+         * 
+         * <p>
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the urls property.
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * <pre>
+         *    getUrls().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link CommunicationContactType202254S }
+         * 
+         * 
+         */
+        public List<CommunicationContactType202254S> getUrls() {
+            if (urls == null) {
+                urls = new ArrayList<CommunicationContactType202254S>();
+            }
+            return this.urls;
+        }
+
+    }
+
+}
