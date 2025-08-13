@@ -1,6 +1,0 @@
-2025-08-04 16:59:28,058 INFO  [main] java.Main (Main.java:87) - Stateless call
-2025-08-04 16:59:30,172 INFO  [main] java.Main (Main.java:92) - Stateful call
-2025-08-04 16:59:31,314 INFO  [main] java.Main (Main.java:98) - Link usage over stateless
-2025-08-04 16:59:32,453 INFO  [main] java.Main (Main.java:104) - Link usage over statefull
-2025-08-04 16:59:33,958 INFO  [main] java.Main (Main.java:111) - Link usage over stateless and stateful
-2025-08-04 16:59:35,042 INFO  [main] java.Main (Main.java:116) - Done.

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
-    <system systemId="file:/C:/Users/User/Desktop/AmadeusWebServices.wsdl" uri="wsdl/AmadeusWebServices.wsdl"/>
-    <system systemId="file:/C:/Users/User/Desktop/1ASIWEFL8EF_PDT_20250610_071152.wsdl" uri="wsdl/1ASIWEFL8EF_PDT_20250610_071152.wsdl"/>
-</catalog>
